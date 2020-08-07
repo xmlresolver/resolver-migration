@@ -1,0 +1,38 @@
+plugins {
+  id "java"
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  maven { url "https://maven.restlet.com" }
+}
+
+configurations.all {
+  resolutionStrategy {
+    force 'xml-apis:xml-apis:1.4.01'
+  }
+}
+
+configurations {
+  demoClasspath.extendsFrom(implementation)
+}
+
+dependencies {
+  implementation (
+    [group: 'org.xmlresolver', name: 'xmlresolver', version: '1.0.8'],
+    [group: 'xerces', name: 'xerces', version: '2.4.0'],
+    [group: 'xerces', name: 'xercesImpl', version: '2.12.0'],
+    [group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25']
+  )
+}
+
+def EXCP="./lib:${projectDir}/build/classes/java/main"
+configurations.demoClasspath.each { it ->
+  EXCP += ":" + it
+}
+
+task demo(type: Exec, dependsOn: ["compileJava"]) {
+  commandLine "java",
+    "-cp", EXCP, "com.nwalsh.resolver.xmlresolver.Demo"
+}

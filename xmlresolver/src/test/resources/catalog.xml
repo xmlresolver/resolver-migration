@@ -1,0 +1,10 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"
+         prefer="public">
+
+  <system systemId="http://example.com/doc.dtd"
+          uri="doc.dtd"/>
+
+  <system systemId="http://example.com/content/chap.xml"
+          uri="chap.xml"/>
+
+</catalog>

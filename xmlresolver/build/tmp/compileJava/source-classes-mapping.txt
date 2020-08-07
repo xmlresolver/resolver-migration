@@ -1,0 +1,3 @@
+com/nwalsh/resolver/xmlresolver/Demo.java
+ com.nwalsh.resolver.xmlresolver.Demo
+ com.nwalsh.resolver.xmlresolver.Demo$MySaxHandler
