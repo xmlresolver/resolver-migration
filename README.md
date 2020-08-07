@@ -64,9 +64,9 @@ import org.apache.xml.resolver.tools.ResolvingXMLReader;
 ```
 
 If you have an application that uses the old library in a different
-way, and you can’t figure out how to convert it. [Open an issue](https://github.com/ndw/resolver-migration/issues)
+way, and you can’t figure out how to convert it, [open an issue](https://github.com/ndw/resolver-migration/issues)
 here with a small sample that demonstrates how you’re using the old library.
-I’ll see if I can’t make another example application here that shows the before-and-after views.
+I’ll see if I can’t make another example application that shows the before-and-after implementations.
 
 ## Configuration
 
